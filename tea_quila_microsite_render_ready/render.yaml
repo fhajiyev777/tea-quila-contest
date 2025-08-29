@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: tea-quila-contest
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app -b 0.0.0.0:$PORT
+    autoDeploy: true
+    region: oregon
+    envVars:
+      - key: ADMIN_USER
+        sync: false
+      - key: ADMIN_PASS
+        sync: false
+      - key: SECRET_KEY
+        sync: false
+      - key: CONTEST_NAME
+        value: Tea‑Quila Enter to Win
+      - key: CONSENT_VERSION
+        value: "1.0"
