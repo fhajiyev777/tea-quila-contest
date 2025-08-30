@@ -40,35 +40,17 @@ a:hover{text-decoration:underline}
 /* Fix checkbox alignment */
 .checkbox {
   display: flex;
-  align-items: center;
-  gap: 8px;
-  margin: 8px 0;
-}
-
-.checkbox input {
-  flex: 0 0 auto;
-  margin: 0;
-}
-
-.checkbox span {
-  flex: 1;
-  text-align: left;
-  line-height: 1.4;
-}
-
-.checkbox {
-  display: flex;
   align-items: flex-start;
-  margin: 8px 0;
+  margin: 10px 0;
 }
 
-.checkbox input {
-  margin-top: 3px; /* aligns nicely with text */
+.checkbox input[type="checkbox"] {
+  margin: 3px 6px 0 0; /* top/right/bottom/left */
 }
 
 .checkbox label {
-  margin-left: 8px;
   flex: 1;
   text-align: left;
   line-height: 1.4;
+  font-size: 14px;
 }
