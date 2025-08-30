@@ -50,3 +50,15 @@ a:hover{text-decoration:underline}
   flex: 1;
   line-height: 1.4;
 }
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 8px 0;
+  text-align: left;
+}
+
+.checkbox label {
+  line-height: 1.4;
+  flex: 1;
+}
