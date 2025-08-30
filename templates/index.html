@@ -64,18 +64,24 @@
         <label>Email</label>
         <input type="email" name="email" required maxlength="200" autocomplete="email">
 
-        <!-- checkboxes -->
-        <div class="checkbox small">
-          <input type="checkbox" id="opt_in" name="opt_in">
-          <label for="opt_in">Yes, sign me up for updates from Tea-Quila. I can unsubscribe any time.</label>
-        </div>
+<div class="checkbox-group">
+  <input type="checkbox" id="opt_in" name="opt_in">
+  <label for="opt_in">
+    Yes, sign me up for updates from Tea-Quila. I can unsubscribe any time.
+  </label>
+</div>
 
-        <div class="checkbox small">
-          <input type="checkbox" id="agree_rules" name="agree_rules" required>
-          <label for="agree_rules">I have read and agree to the Official Rules &amp; Regulations.</label>
-        </div>
+<div class="checkbox-group">
+  <input type="checkbox" id="agree_rules" name="agree_rules" required>
+  <label for="agree_rules">
+    I have read and agree to the Official Rules &amp; Regulations.
+  </label>
+</div>
 
-        <p class="small"><a href="/rules" target="_blank">View Rules &amp; Regulations</a></p>
+<p class="small">
+  <a href="/rules" target="_blank">View Rules &amp; Regulations</a>
+</p>
+
 
         <input type="hidden" name="csrf" value="{{ csrf }}">
         <button type="submit">Submit</button>
