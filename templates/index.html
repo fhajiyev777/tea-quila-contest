@@ -61,18 +61,17 @@
         <label>Email</label>
         <input type="email" name="email" required maxlength="200" autocomplete="email">
 
-<label class="checkbox small">
-  <input type="checkbox" name="opt_in">
-  <span>Yes, sign me up for updates from Tea-Quila. I can unsubscribe any time.</span>
-</label>
+<div class="checkbox small">
+  <input type="checkbox" name="opt_in" id="opt_in">
+  <label for="opt_in">Yes, sign me up for updates from Tea-Quila. I can unsubscribe any time.</label>
+</div>
 
-<label class="checkbox small">
-  <input type="checkbox" name="agree_rules" required>
-  <span>I have read and agree to the Official Rules &amp; Regulations.</span>
-</label>
+<div class="checkbox small">
+  <input type="checkbox" name="agree_rules" id="agree_rules" required>
+  <label for="agree_rules">I have read and agree to the Official Rules &amp; Regulations.</label>
+</div>
 
 <p class="small"><a href="/rules" target="_blank">View Rules &amp; Regulations</a></p>
-
 
         <input type="hidden" name="csrf" value="{{ csrf }}">
         <button type="submit">Submit</button>
