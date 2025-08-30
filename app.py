@@ -19,7 +19,9 @@ with open(BASE_DIR / "age_map.json") as f:
 app = Flask(__name__)
 app.secret_key = SECRET_KEY
 serializer = URLSafeSerializer(SECRET_KEY, salt="entry")
-DB_PATH = str(BASE_DIR / "sweeps.db")
+
+DATA_DIR = Path(os.getenv("DATA_DIR", "/data"))  # /data on Render, falls back locally
+DB_PATH = str(DATA_DIR / "sweeps.db")
 
 @app.after_request
 def add_frame_headers(resp):
