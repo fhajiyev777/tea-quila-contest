@@ -56,3 +56,19 @@ a:hover{text-decoration:underline}
   line-height: 1.4;
 }
 
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  margin: 8px 0;
+}
+
+.checkbox input {
+  margin-top: 3px; /* aligns nicely with text */
+}
+
+.checkbox label {
+  margin-left: 8px;
+  flex: 1;
+  text-align: left;
+  line-height: 1.4;
+}
