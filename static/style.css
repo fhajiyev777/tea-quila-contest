@@ -35,22 +35,23 @@ a:hover{text-decoration:underline}
 .sorry{padding:48px 16px;text-align:center}
 /* Checkbox alignment */
 .actions{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:8px 0 4px}
-.checkbox{display:flex;align-items:flex-start;gap:8px;margin:8px 0}
-.checkbox input[type="checkbox"]{margin-top:2px}
-/* Fix checkbox alignment */
 .checkbox {
   display: flex;
   align-items: flex-start;
-  margin: 10px 0;
+  width: 100%;
+  margin: 12px 0;
 }
 
 .checkbox input[type="checkbox"] {
-  margin: 3px 6px 0 0; /* top/right/bottom/left */
+  flex: 0 0 auto;
+  margin: 4px 8px 0 0;
 }
 
 .checkbox label {
-  flex: 1;
+  flex: 1 1 auto;
+  display: block;
   text-align: left;
-  line-height: 1.4;
-  font-size: 14px;
+  white-space: normal;
+  word-break: break-word;
+  line-height: 1.5;
 }
