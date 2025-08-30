@@ -37,3 +37,16 @@ a:hover{text-decoration:underline}
 .actions{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:8px 0 4px}
 .checkbox{display:flex;align-items:flex-start;gap:8px;margin:8px 0}
 .checkbox input[type="checkbox"]{margin-top:2px}
+/* Fix checkbox alignment */
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 8px 0;
+  text-align: left;
+}
+
+.checkbox span {
+  flex: 1;
+  line-height: 1.4;
+}
