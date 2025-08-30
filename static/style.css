@@ -74,3 +74,25 @@ button:hover { background:#008ec2 }
   white-space:normal !important;
   word-break:break-word !important;
 }
+/* force checkboxes to break free of grid layout */
+.checkbox {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  width: 100% !important;
+}
+
+.checkbox input[type="checkbox"] {
+  flex: 0 0 auto !important;
+  margin-top: 4px !important;
+  margin-right: 8px !important;
+}
+
+.checkbox label {
+  flex: 1 1 auto !important;
+  display: block !important;
+  text-align: left !important;
+  line-height: 1.4 !important;
+  white-space: normal !important;
+  word-break: break-word !important;
+}
