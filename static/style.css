@@ -55,3 +55,11 @@ a:hover{text-decoration:underline}
   word-break: break-word;
   line-height: 1.5;
 }
+.checkbox label {
+  display: inline-block !important;
+  writing-mode: horizontal-tb !important;
+  white-space: normal !important;
+  word-break: normal !important;
+  overflow-wrap: anywhere;
+  text-align: left;
+}
