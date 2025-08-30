@@ -1,0 +1,39 @@
+:root{
+  --brand:#00A9E0;
+  --accent:#FFC600;
+  --bg:#00A9E0;
+  --ink:#0A0A0A;
+  --card:#ffffff;
+  --border:rgba(0,0,0,.08);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+.wrap{min-height:100%;display:flex;align-items:flex-start;justify-content:center;padding:24px}
+.card{width:min(720px,100%);background:var(--card);border-radius:16px;border:1px solid var(--border);box-shadow:0 20px 60px rgba(0,0,0,.18);overflow:hidden}
+.header{padding:16px 16px 0}
+.hero{width:100%;aspect-ratio:1/1;background:#eef;display:flex;align-items:center;justify-content:center}
+.hero img{display:block;width:100%;height:auto}
+.content{padding:16px}
+h1{margin:0 0 8px}
+label{display:block;margin:12px 0 6px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:640px){.grid{grid-template-columns:1fr}}
+input,select,button{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--border);background:#fff;color:var(--ink);font-size:16px}
+input:focus,select:focus{outline:3px solid rgba(0,169,224,.25)}
+button{background:var(--brand);color:#fff;border:none;font-weight:600;cursor:pointer;transition:transform .02s ease,filter .15s ease}
+button:hover{filter:brightness(.96)}
+button:active{transform:translateY(1px)}
+.small{font-size:12px;color:#555}
+a{color:#005B7F;text-decoration:none}
+a:hover{text-decoration:underline}
+/* Age gate modal */
+.gate{position:fixed;inset:0;background:rgba(0,0,0,.55);display:flex;align-items:center;justify-content:center;padding:16px}
+.gate-inner{width:min(420px,100%);background:#fff;border-radius:16px;padding:20px;box-shadow:0 24px 80px rgba(0,0,0,.35);text-align:center}
+.gate-actions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.btn-accent{background:var(--accent);color:#0A0A0A}
+.sorry{padding:48px 16px;text-align:center}
+/* Checkbox alignment */
+.actions{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:8px 0 4px}
+.checkbox{display:flex;align-items:flex-start;gap:8px;margin:8px 0}
+.checkbox input[type="checkbox"]{margin-top:2px}

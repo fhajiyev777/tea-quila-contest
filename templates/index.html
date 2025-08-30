@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{ contest_name }}</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <div class="header">
+      <h1>{{ contest_name }}</h1>
+    </div>
+    <div class="hero">
+      {% if hero_exists %}
+        <img src="/static/hero.png" alt="Campaign Visual">
+      {% else %}
+        <div style="padding:24px;text-align:center;color:#666;width:100%">
+          <strong>hero.png</strong> (1080×1080) not found. Drop it into <code>/static/</code>.
+        </div>
+      {% endif %}
+    </div>
+    <div class="content">
+      <form action="/enter" method="post" autocomplete="on">
+        <div class="grid">
+          <div>
+            <label>First name</label>
+            <input name="first_name" required maxlength="80">
+          </div>
+          <div>
+            <label>Last name</label>
+            <input name="last_name" required maxlength="80">
+          </div>
+        </div>
+
+        <div class="grid">
+          <div>
+            <label>Province/Territory</label>
+            <select name="province" required>
+              <option value="">Select</option>
+              {% for code in provinces %}<option value="{{ code }}">{{ code }}</option>{% endfor %}
+            </select>
+          </div>
+          <div>
+            <label>Age</label>
+            <input type="number" name="age" min="18" max="120" required>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div>
+            <label>Postal code</label>
+            <input name="postal_code" required maxlength="10">
+          </div>
+          <div>
+            <label>Phone (optional)</label>
+            <input type="tel" name="phone" maxlength="30" autocomplete="tel">
+          </div>
+        </div>
+
+        <label>Email</label>
+        <input type="email" name="email" required maxlength="200" autocomplete="email">
+
+        <div class="actions">
+          <a class="small" href="/rules" target="_blank">View Rules &amp; Regulations</a>
+          <label class="checkbox small">
+            <input type="checkbox" name="opt_in">
+            <span>Yes, sign me up for updates from Tea‑Quila. I can unsubscribe any time.</span>
+          </label>
+        </div>
+
+        <label class="checkbox small">
+          <input type="checkbox" name="agree_rules" required>
+          <span>I have read and agree to the Official Rules &amp; Regulations.</span>
+        </label>
+
+        <input type="hidden" name="csrf" value="{{ csrf }}">
+        <button type="submit">Submit</button>
+        <p class="small">No purchase necessary. Open to legal drinking age residents of Canada where permitted.</p>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% if show_gate %}
+<div class="gate" id="gate">
+  <div class="gate-inner">
+    <h2>Are you of legal drinking age in your province?</h2>
+    <div class="gate-actions">
+      <form method="post" action="/gate-yes"><button type="submit">Yes</button></form>
+      <form method="post" action="/gate-no"><button type="submit" class="btn-accent">No</button></form>
+    </div>
+  </div>
+</div>
+{% endif %}
+</body>
+</html>
