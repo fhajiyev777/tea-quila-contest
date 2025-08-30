@@ -1,1 +1,0 @@
-Drop your 1080x1080 image here named hero.png.
